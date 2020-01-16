@@ -19,9 +19,7 @@ extension ApiManager {
             "password": password
         ]
         
-        print(params.description)
         Alamofire.request(ApiNameManager.shared.returnUrl(ApiNameManager.shared.register), method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
-            print(response.response?.statusCode)
             switch response.result{
             case .success(let value):
                 let json = JSON(value)

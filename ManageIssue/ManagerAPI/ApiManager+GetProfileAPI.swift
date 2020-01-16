@@ -16,10 +16,7 @@ extension ApiManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                
-                
                 let code = json["code"].intValue
-                
                 if code == 0 {
                     if let data = json["data"].dictionary{
                         let userProfile = Profile(json: JSON(data))

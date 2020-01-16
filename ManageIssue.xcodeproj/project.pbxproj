@@ -27,7 +27,6 @@
 		A986922C235DAE89006E45DA /* ListIssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986922B235DAE89006E45DA /* ListIssueCell.swift */; };
 		A986922E235DC61F006E45DA /* TPKeyboardAvoidingSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986922D235DC61F006E45DA /* TPKeyboardAvoidingSwift.swift */; };
 		A9933343235FFD3200E870F6 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9933342235FFD3200E870F6 /* UITextView+Extension.swift */; };
-		A99AA07B23642F620066A069 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AA07A23642F620066A069 /* UIButton+Extension.swift */; };
 		A99E8A0423557948004560B7 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E8A0323557948004560B7 /* MenuCell.swift */; };
 		A99E8A0623557BCF004560B7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E8A0523557BCF004560B7 /* HeaderView.swift */; };
 		A9A3393F2399F81400BCD599 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A3393E2399F81400BCD599 /* Notification+Extension.swift */; };
@@ -73,7 +72,6 @@
 		A986922B235DAE89006E45DA /* ListIssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIssueCell.swift; sourceTree = "<group>"; };
 		A986922D235DC61F006E45DA /* TPKeyboardAvoidingSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPKeyboardAvoidingSwift.swift; sourceTree = "<group>"; };
 		A9933342235FFD3200E870F6 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
-		A99AA07A23642F620066A069 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		A99E8A0323557948004560B7 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		A99E8A0523557BCF004560B7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A9A3393E2399F81400BCD599 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
@@ -125,32 +123,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A9185140237A6D50005F92E1 /* SlideMenu */ = {
+		A909A49223C6C70D00A9B531 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A986922B235DAE89006E45DA /* ListIssueCell.swift */,
 				A99E8A0323557948004560B7 /* MenuCell.swift */,
-				A9EE66B52354689200A3C044 /* SlideMenuViewController.swift */,
-				A99E8A0523557BCF004560B7 /* HeaderView.swift */,
-			);
-			path = SlideMenu;
-			sourceTree = "<group>";
-		};
-		A9185141237A6D71005F92E1 /* CreateIssue */ = {
-			isa = PBXGroup;
-			children = (
-				A9DD61DA23751BA800B3730F /* CreateIssueViewController.swift */,
 				A9CA9F0D2376C36C006DDA5F /* MediaCell.swift */,
 			);
-			path = CreateIssue;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		A9185142237A6FE1005F92E1 /* Home */ = {
+		A909A49323C6C76F00A9B531 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A9EE66A62354589B00A3C044 /* HomeViewController.swift */,
-				A986922B235DAE89006E45DA /* ListIssueCell.swift */,
+				A99E8A0523557BCF004560B7 /* HeaderView.swift */,
 			);
-			path = Home;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A99E8A0723557FD9004560B7 /* Models */ = {
@@ -203,12 +191,13 @@
 		A9EE668F235457E300A3C044 /* ManageIssue */ = {
 			isa = PBXGroup;
 			children = (
-				A9EAE075237265AC005B1C68 /* ManagerAPI */,
 				A99E8A0723557FD9004560B7 /* Models */,
+				A909A49323C6C76F00A9B531 /* Views */,
+				A9EE66AA235458D500A3C044 /* Controllers */,
 				A9EE66AE2354673D00A3C044 /* Extensions */,
 				A9EE66AD2354670500A3C044 /* Helpers */,
 				A9EE66AC235466FD00A3C044 /* Libraries */,
-				A9EE66AA235458D500A3C044 /* Screens */,
+				A9EAE075237265AC005B1C68 /* ManagerAPI */,
 				A9EE6690235457E300A3C044 /* AppDelegate.swift */,
 				A9EE6692235457E300A3C044 /* SceneDelegate.swift */,
 				A9EE6696235457E300A3C044 /* Main.storyboard */,
@@ -219,19 +208,20 @@
 			path = ManageIssue;
 			sourceTree = "<group>";
 		};
-		A9EE66AA235458D500A3C044 /* Screens */ = {
+		A9EE66AA235458D500A3C044 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A9185142237A6FE1005F92E1 /* Home */,
+				A909A49223C6C70D00A9B531 /* Cells */,
 				A9EE66A42354588F00A3C044 /* LoginViewController.swift */,
 				A98472A62362BBB900341BAF /* RegisterViewController.swift */,
-				A9185140237A6D50005F92E1 /* SlideMenu */,
-				A9185141237A6D71005F92E1 /* CreateIssue */,
+				A9EE66A62354589B00A3C044 /* HomeViewController.swift */,
+				A9EE66B52354689200A3C044 /* SlideMenuViewController.swift */,
+				A9DD61DA23751BA800B3730F /* CreateIssueViewController.swift */,
 				A9EE66B32354688600A3C044 /* DetailViewController.swift */,
-				A9EE66B9235468B400A3C044 /* SettingViewController.swift */,
 				A98472A42362A74A00341BAF /* ProfileController.swift */,
+				A9EE66B9235468B400A3C044 /* SettingViewController.swift */,
 			);
-			path = Screens;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A9EE66AC235466FD00A3C044 /* Libraries */ = {
@@ -259,7 +249,6 @@
 				A9EE66C0235473B600A3C044 /* UIViewController+Extension.swift */,
 				A92D25BF235EAC0A0010E4C1 /* UITextField+Extension.swift */,
 				A9933342235FFD3200E870F6 /* UITextView+Extension.swift */,
-				A99AA07A23642F620066A069 /* UIButton+Extension.swift */,
 				A93F9C5923741B1D000C939A /* UIImageView+Extension.swift */,
 				A9A3393E2399F81400BCD599 /* Notification+Extension.swift */,
 			);
@@ -428,7 +417,6 @@
 				A9EE66A82354589B00A3C044 /* HomeViewController.swift in Sources */,
 				A99E8A0623557BCF004560B7 /* HeaderView.swift in Sources */,
 				A90F8E672372C5C10003F045 /* ApiManager+UpdateProfile.swift in Sources */,
-				A99AA07B23642F620066A069 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
